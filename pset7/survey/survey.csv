@@ -1,0 +1,26 @@
+10.240.1.50 -- [11/Dec/2019 12:06:42] "Get / HTTP/1.1"302-
+10.240.1.30 -- [11/Dec/2019 12:06:42] "Get /form HTTP/1.1"200-
+10.240.1.30 -- [11/Dec/2019 12:06:42] "Get /static/style.css HTTP/1.1"200-
+[2019-01-27 06:27:07,068] ERROR in app: Exception on/form[POST]
+Traceback (most recent call last):
+    File "/opt/pyenv/versions/3.6.0/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+      response = self.full_dispatch_request()
+    File "/opt/pyenv/version/3.6.0/lib/python3.6/site-packages/flask/app.py",line 1815,in full_dispatch_request
+      response = self.handle_user_exception(e)
+    File "/opt/pyenv/version/3.6.0/lib/python3.6/site-packages/flask/app.py",line 1815,in full_dispatch_request
+      reraise(exc_type, exc_value, tb)
+    File "/opt/pyenv/version/3.6.0/lib/python3.6/site-packages/flask/app.py",line 1815,in full_dispatch_request
+       raise value
+    File "/opt/pyenv/version/3.6.0/lib/python3.6/site-packages/flask/app.py",line 1815,in full_dispatch_request
+       rv = self.dispatch_request()
+    File "/opt/pyenv/version/3.6.0/lib/python3.6/site-packages/flask/app.py",line 1815,in full_dispatch_request
+       return self.view_functions[rule.endpoint](**req.view_args)
+    File "/home/ubuntu/workspace/pset7/survey/application.py",line 34,in post_form
+      writer.writerrow({"First":request.form.get("inputFirstName"), "Last": request.form.get("InputLastgName"), "Email":
+       request.form.get("InputEmail"), "UpdateTopic": request.form.get("dropdownMenuButton")})
+    File "/opt/pyenv/versions/3.6.0/lib/python3.6/site-packages/flask/app.py", line 39, in writerow
+        return self.writer.writerrow(self._dict_to_list(rowdict))
+    File "/opt/pyenv/versions/3.6.0/lib/python3.6/site-packages/flask/app.py", line 45,in_dict_to_list
+       + ", ".join([repr(x) for x in wrong_fields])
+    ValueError: dict contains fields not in fieldname: 'UpdateTopic'
+10.240.1.30 -- [11/Dec/2019 1:14:07] "POST /form HTTP/1.1" 500 -

@@ -1,0 +1,41 @@
+*
+.form-group
+{
+    color:lightblue;
+    font-size:50px;
+    font-family:Elephant;
+}
+
+.valid-feedback
+{
+    color:green;
+}
+.form-group
+{
+ color:lightblue;
+ font-size:50px;
+ font-family:Elephant;
+}
+
+.valid-feedback
+{
+    color:green;
+}
+.form-group
+{
+    color:lightblue;
+    font-size:50px;
+    font-family:Elephant;
+}
+.invalid-feedback
+{
+    color:red;
+}
+.dropdown
+{
+    color:yellow;
+}
+.form-check
+{
+    color:black;
+}
